@@ -14,6 +14,7 @@ module.exports = {
         TextColor: ['#999999'],
         TextColor2: ['#777777'],
         BorderColor: ['#d5d5d5'],
+        BorderColor2: ['#e2e2e2'],
       },
     },
   },

@@ -1,3 +1,5 @@
+//Calender
+
 const calendarDays2 = document.getElementById('calendar-days2');
 const month2 = document.getElementById('month2');
 const year2 = document.getElementById('year2');
@@ -81,3 +83,40 @@ nextButton2.addEventListener('click', () => {
 });
 
 renderCalendar2();
+
+
+//Time Button Active
+
+document.addEventListener('DOMContentLoaded', function () {
+  let buttons = document.querySelectorAll('.time-btn button, .time-btn button');
+
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      buttons.forEach(function (btn) {
+        btn.classList.remove('active');
+      });
+      this.classList.add('active');
+    });
+  });
+});
+
+
+
+/* Custom Time Zone Select */
+
+document.getElementById('timezone').addEventListener('change', function () {
+  const selectedTimeZone = this.value;
+  displayCurrentTime(selectedTimeZone);
+});
+
+function displayCurrentTime(timeZone) {
+  const now = new Date();
+  const utcOffset = parseInt(timeZone.split('UTC')[1].split(':')[0]);
+  const localTime = new Date(now.getTime() + utcOffset * 60 * 60 * 1000);
+  const formattedTime = localTime.toISOString().slice(0, 19).replace('T', ' ');
+  document.getElementById(
+    'current-time'
+  ).innerText = `Current Time: ${formattedTime} (UTC${
+    utcOffset >= 0 ? '+' : ''
+  }${utcOffset}:00)`;
+}

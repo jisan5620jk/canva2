@@ -55,15 +55,18 @@
   opacity: 100%;
 }
 
-.time-btn::-webkit-scrollbar {
+.time-btn::-webkit-scrollbar ,
+#timezone::-webkit-scrollbar {
   width: 3px;
 }
 
-.time-btn::-webkit-scrollbar-track {
+.time-btn::-webkit-scrollbar-track ,
+#timezone::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.time-btn::-webkit-scrollbar-thumb {
+.time-btn::-webkit-scrollbar-thumb ,
+#timezone::-webkit-scrollbar-thumb {
   background-color: #0899cd6b;
   border-radius: 0;
 }
