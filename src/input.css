@@ -1,0 +1,231 @@
+/* Google Font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Custom CSS */
+
+.time-btn button.active {
+  color: white;
+}
+
+.time-btn button.active::before {
+  width: 100%;
+  left: 0;
+}
+
+.time-btn button.active::after {
+  transform: scale(1);
+}
+
+@media screen and (min-width: 640px) {
+  .time-btn button.active {
+    color: #089acd;
+  }
+
+  .time-btn button.active::before {
+    height: 100%;
+    top: 0;
+    bottom: auto;
+  }
+
+  .time-btn button.active::after {
+    transform: scale(0);
+  }
+}
+
+.tab-content.active,
+.tab-content2.active {
+  display: block;
+}
+
+.tab-btn.active button,
+.tab-btn2.active button {
+  color: #089acd;
+  border-color: #089acd;
+}
+
+.tab-btn.active button::before,
+.tab-btn2.active button::before {
+  height: 8px;
+}
+
+.tab-btn.active button img,
+.tab-btn2.active button img {
+  filter: brightness(100%) invert(0);
+  opacity: 100%;
+}
+
+.time-btn::-webkit-scrollbar {
+  width: 3px;
+}
+
+.time-btn::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.time-btn::-webkit-scrollbar-thumb {
+  background-color: #0899cd6b;
+  border-radius: 0;
+}
+
+/* Calender CSS */
+
+.calendar {
+  width: 100%;
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 28px;
+}
+
+#month {
+  font-size: 30px;
+  line-height: 18px;
+  color: #002931;
+  font-weight: 500;
+  font-family: "Poppins";
+  text-align: center;
+}
+
+#year {
+  font-size: 18px;
+  line-height: 18px;
+  color: #777777;
+  font-weight: 500;
+  font-family: "Poppins";
+  padding-top: 12px;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.calendar-body {
+  padding: 10px;
+}
+
+.calendar-weekdays,
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-weekdays div {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #777777;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Poppins", "sans-serif";
+  margin: 7px auto 20px;
+}
+
+.calendar-days div {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #dddddd;
+  font-weight: 600;
+  font-family: "Poppins";
+  text-align: center;
+  width: 37px;
+  height: 37px;
+  line-height: 37px;
+  border-radius: 30px;
+  transition: all 0.5s;
+  margin: 13px auto;
+}
+
+.calendar-days div:hover {
+  background-color: #ebeef0;
+  color: #555555;
+}
+
+.calendar-days div.today {
+  filter: drop-shadow(2.237px 3.316px 4.5px rgba(8, 153, 205, 0.45));
+  background-color: #0899cd;
+  color: #fff;
+}
+
+.calendar-weekdays {
+  font-weight: bold;
+}
+
+.calendar-days div {
+  cursor: pointer;
+}
+
+.calendar-days div:hover {
+  background: #f0f0f0;
+}
+
+.today {
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+}
+
+.event {
+  border: 2px solid #007bff;
+  border-radius: 50%;
+}
+
+
+.calendar-days2 div {
+  text-transform: uppercase;
+  color: #dddddd;
+  font-weight: 500;
+  font-family: "Poppins";
+  text-align: center;
+  width: 37px;
+  height: 37px;
+  line-height: 37px;
+  border-radius: 5px;
+  transition: all 0.5s;
+  margin: 13px auto;
+}
+
+.calendar-days2 div:hover {
+  background-color: #f2f6ff;
+  color: #999999;
+}
+
+.calendar-days2 div.today2 {
+filter: drop-shadow(0px 3px 9px rgba(0,102,139,0.22));
+background-color: #0899cd;
+  color: #fff;
+}
+
+.calendar-weekdays2 {
+  font-weight: bold;
+}
+
+.calendar-days2 div {
+  cursor: pointer;
+}
+
+.calendar-days2 div:hover {
+  background: #f0f0f0;
+}
+
+.today2 {
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+}
+
+.event2 {
+  border: 2px solid #007bff;
+  border-radius: 50%;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
