@@ -49,68 +49,93 @@
       >
         Canva
       </h3>
-      <div class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
-  <div class="flex items-center justify-between p-4">
-    <button id="prev" class="text-gray-600 hover:text-gray-900">&lt;</button>
-    <div id="monthYear" class="text-lg font-semibold"></div>
-    <button id="next" class="text-gray-600 hover:text-gray-900">&gt;</button>
-  </div>
-  <div class="grid grid-cols-7 gap-2 p-4">
-    <div class="text-center">Sun</div>
-    <div class="text-center">Mon</div>
-    <div class="text-center">Tue</div>
-    <div class="text-center">Wed</div>
-    <div class="text-center">Thu</div>
-    <div class="text-center">Fri</div>
-    <div class="text-center">Sat</div>
-    <div id="dates" class="col-span-7 grid grid-cols-7 gap-2"></div>
-  </div>
-</div>
-
+      <div
+        class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden"
+      >
+        <div class="flex items-center justify-between p-4">
+          <button
+            id="prev"
+            class="text-gray-600 hover:text-gray-900"
+          >
+            &lt;
+          </button>
+          <div
+            id="monthYear"
+            class="text-lg font-semibold"
+          ></div>
+          <button
+            id="next"
+            class="text-gray-600 hover:text-gray-900"
+          >
+            &gt;
+          </button>
+        </div>
+        <div class="grid grid-cols-7 gap-2 p-4">
+          <div class="text-center">Sun</div>
+          <div class="text-center">Mon</div>
+          <div class="text-center">Tue</div>
+          <div class="text-center">Wed</div>
+          <div class="text-center">Thu</div>
+          <div class="text-center">Fri</div>
+          <div class="text-center">Sat</div>
+          <div
+            id="dates"
+            class="col-span-7 grid grid-cols-7 gap-2"
+          ></div>
+        </div>
+      </div>
     </div>
     <script>
       /* Mobile device Calender */
 
       (function () {
         document.addEventListener('DOMContentLoaded', () => {
-  const monthYear = document.getElementById('monthYear');
-  const dates = document.getElementById('dates');
-  const prev = document.getElementById('prev');
-  const next = document.getElementById('next');
+          const monthYear = document.getElementById('monthYear');
+          const dates = document.getElementById('dates');
+          const prev = document.getElementById('prev');
+          const next = document.getElementById('next');
 
-  let currentDate = new Date();
-  let currentWeekStart = new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay()));
+          let currentDate = new Date();
+          let currentWeekStart = new Date(
+            currentDate.setDate(currentDate.getDate() - currentDate.getDay())
+          );
 
-  function renderCalendar() {
-    const year = currentWeekStart.getFullYear();
-    const month = currentWeekStart.getMonth();
-    const weekStart = new Date(currentWeekStart);
-    const weekEnd = new Date(currentWeekStart);
-    weekEnd.setDate(weekEnd.getDate() + 6);
+          function renderCalendar() {
+            const year = currentWeekStart.getFullYear();
+            const month = currentWeekStart.getMonth();
+            const weekStart = new Date(currentWeekStart);
+            const weekEnd = new Date(currentWeekStart);
+            weekEnd.setDate(weekEnd.getDate() + 6);
 
-    monthYear.textContent = `${weekStart.toLocaleDateString('en-US', { month: 'long' })} ${year}`;
+            monthYear.textContent = `${weekStart.toLocaleDateString('en-US', {
+              month: 'long',
+            })} ${year}`;
 
-    dates.innerHTML = '';
-    for (let i = 0; i < 7; i++) {
-      const date = new Date(weekStart);
-      date.setDate(weekStart.getDate() + i);
-      dates.innerHTML += `<div class="text-center p-2 ${date.toDateString() === new Date().toDateString() ? 'bg-blue-500 text-white rounded-full' : ''}">${date.getDate()}</div>`;
-    }
-  }
+            dates.innerHTML = '';
+            for (let i = 0; i < 7; i++) {
+              const date = new Date(weekStart);
+              date.setDate(weekStart.getDate() + i);
+              dates.innerHTML += `<div class="text-center p-2 ${
+                date.toDateString() === new Date().toDateString()
+                  ? 'bg-blue-500 text-white rounded-full'
+                  : ''
+              }">${date.getDate()}</div>`;
+            }
+          }
 
-  prev.addEventListener('click', () => {
-    currentWeekStart.setDate(currentWeekStart.getDate() - 7);
-    renderCalendar();
-  });
+          prev.addEventListener('click', () => {
+            currentWeekStart.setDate(currentWeekStart.getDate() - 7);
+            renderCalendar();
+          });
 
-  next.addEventListener('click', () => {
-    currentWeekStart.setDate(currentWeekStart.getDate() + 7);
-    renderCalendar();
-  });
+          next.addEventListener('click', () => {
+            currentWeekStart.setDate(currentWeekStart.getDate() + 7);
+            renderCalendar();
+          });
 
-  renderCalendar();
-});
-})();
+          renderCalendar();
+        });
+      })();
     </script>
   </body>
 </html>

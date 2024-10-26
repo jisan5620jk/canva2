@@ -117,4 +117,55 @@ function displayCurrentTime(timeZone) {
     utcOffset >= 0 ? '+' : ''
   }${utcOffset}:00)`;
 }
+ 
 
+/* Mobile Calendar */
+
+(function () {
+  document.addEventListener('DOMContentLoaded', () => {
+    const monthYear = document.getElementById('monthYear');
+    const dates = document.getElementById('dates');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+
+    let currentDate = new Date();
+    let currentWeekStart = new Date(
+      currentDate.setDate(currentDate.getDate() - currentDate.getDay())
+    );
+
+    function renderCalendar() {
+      const year = currentWeekStart.getFullYear();
+      const month = currentWeekStart.getMonth();
+      const weekStart = new Date(currentWeekStart);
+      const weekEnd = new Date(currentWeekStart);
+      weekEnd.setDate(weekEnd.getDate() + 6);
+
+      monthYear.textContent = `${weekStart.toLocaleDateString('en-US', {
+        month: 'long',
+      })} ${year}`;
+
+      dates.innerHTML = '';
+      for (let i = 0; i < 7; i++) {
+        const date = new Date(weekStart);
+        date.setDate(weekStart.getDate() + i);
+        dates.innerHTML += `<div class="text-center rounded-full font-Poppins flex items-center justify-center relative ${
+          date.toDateString() === new Date().toDateString()
+            ? 'today-date text-white bg-PrimaryColor-0'
+            : ''
+        }">${date.getDate()} <span class="absolute -top-1 -right-1 size-[18px] bg-white rounded-full flex items-center justify-center text-green-500 text-sm border-2 border-white opacity-0"><i class="fa-solid fa-circle-check"></i></span></div>`;
+      }
+    }
+
+    prev.addEventListener('click', () => {
+      currentWeekStart.setDate(currentWeekStart.getDate() - 7);
+      renderCalendar();
+    });
+
+    next.addEventListener('click', () => {
+      currentWeekStart.setDate(currentWeekStart.getDate() + 7);
+      renderCalendar();
+    });
+
+    renderCalendar();
+  });
+})();

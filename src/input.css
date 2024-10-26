@@ -1,7 +1,6 @@
 /* Google Font Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 /* Custom CSS */
 
 .time-btn button.active {
@@ -13,59 +12,32 @@
   left: 0;
 }
 
-.time-btn button.active::after {
-  transform: scale(1);
-}
+  .time-btn button.active span {
+    opacity: 1;
+  }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 639px) {
   .time-btn button.active {
     color: #089acd;
   }
 
-  .time-btn button.active::before {
-    height: 100%;
-    top: 0;
-    bottom: auto;
+  .time-btn button.active span {
+    opacity: 0;
   }
 
-  .time-btn button.active::after {
-    transform: scale(0);
-  }
 }
 
-.tab-content.active,
-.tab-content2.active {
-  display: block;
-}
-
-.tab-btn.active button,
-.tab-btn2.active button {
-  color: #089acd;
-  border-color: #089acd;
-}
-
-.tab-btn.active button::before,
-.tab-btn2.active button::before {
-  height: 8px;
-}
-
-.tab-btn.active button img,
-.tab-btn2.active button img {
-  filter: brightness(100%) invert(0);
-  opacity: 100%;
-}
-
-.time-btn::-webkit-scrollbar ,
+.time-btn::-webkit-scrollbar,
 #timezone::-webkit-scrollbar {
   width: 3px;
 }
 
-.time-btn::-webkit-scrollbar-track ,
+.time-btn::-webkit-scrollbar-track,
 #timezone::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.time-btn::-webkit-scrollbar-thumb ,
+.time-btn::-webkit-scrollbar-thumb,
 #timezone::-webkit-scrollbar-thumb {
   background-color: #0899cd6b;
   border-radius: 0;
@@ -90,7 +62,7 @@
   line-height: 18px;
   color: #002931;
   font-weight: 500;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   text-align: center;
 }
 
@@ -99,7 +71,7 @@
   line-height: 18px;
   color: #777777;
   font-weight: 500;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   padding-top: 12px;
 }
 
@@ -126,7 +98,7 @@
   color: #777777;
   text-align: center;
   font-weight: 700;
-  font-family: "Poppins", "sans-serif";
+  font-family: 'Poppins', 'sans-serif';
   margin: 7px auto 20px;
 }
 
@@ -135,7 +107,7 @@
   text-transform: uppercase;
   color: #dddddd;
   font-weight: 600;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   text-align: center;
   width: 37px;
   height: 37px;
@@ -179,12 +151,11 @@
   border-radius: 50%;
 }
 
-
 .calendar-days2 div {
   text-transform: uppercase;
   color: #dddddd;
   font-weight: 500;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   text-align: center;
   width: 37px;
   height: 37px;
@@ -200,8 +171,8 @@
 }
 
 .calendar-days2 div.today2 {
-filter: drop-shadow(0px 3px 9px rgba(0,102,139,0.22));
-background-color: #0899cd;
+  filter: drop-shadow(0px 3px 9px rgba(0, 102, 139, 0.22));
+  background-color: #0899cd;
   color: #fff;
 }
 
@@ -228,6 +199,43 @@ background-color: #0899cd;
   border-radius: 50%;
 }
 
+/* Mobile Calendar */
+
+div#dates div {
+width: 40px;
+height: 40px;
+color: #c1c0c0;
+transition: all .5s;
+}
+
+div#dates div:hover {
+color: #262626;
+}
+
+div#dates div.today-date {
+  color: #fff;
+}
+
+div#dates div:after  {
+position: absolute;
+content: '';
+bottom: 4px; 
+left: 50%;
+ transform: translateX(-50%);
+ width: 4px;
+ height: 4px;
+ border-radius: 10px;
+ background: #fff;
+}
+
+div#dates div.today-date span{
+  opacity: 1;
+}
+
+div#dates div span{
+  top: -6px;
+  right: -6px;
+}
 
 @tailwind base;
 @tailwind components;

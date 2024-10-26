@@ -49,87 +49,146 @@
       >
         Canva
       </h3>
-      <div class="border rounded-[30px] border-BorderColor-0 mt-11">
+      <div class="md:border rounded-[30px] border-BorderColor-0 mt-6 md:mt-11">
         <div class="-mt-4 flex justify-center">
           <h4
-            class="font-Poppins font-bold text-[22px] text-TextColor-0 text-center bg-white px-[18px]"
+            class="font-Poppins font-bold text-[22px] text-TextColor-0 text-center bg-white px-[18px] hidden md:block"
           >
             Choose Date & Time
           </h4>
+          <p class="font-Poppins text-TextColor-0 pb-6 md:hidden">Choose a time that work for you.</p>
         </div>
-        <div class="grid grid-cols-3 items-start mt-[26px]">
+        <div class="grid grid-cols-2 lg:grid-cols-3 items-start mt-[26px]">
           <div class="col-span-2 calendar2 px-10 w-full overflow-hidden">
-            <div class="calendar-header2 flex items-center justify-between">
-              <button
-                id="prev2"
-                class="size-[30px] rounded-full flex items-center justify-center text-TextColor-0 text-sm border-2 border-TextColor-0 cursor-pointer"
-              >
-                <i class="fa-solid fa-chevron-left"></i>
-              </button>
-              <div class="text-center">
-                <div
-                  id="month2"
-                  class="font-Poppins font-semibold text-xl text-TextColor-0"
-                ></div>
-                <div
-                  id="year2"
-                  class="font-Poppins text-lg text-TextColor2-0 -mt-[3px]"
-                ></div>
-              </div>
-              <button
-                id="next2"
-                class="size-[30px] rounded-full flex items-center justify-center text-TextColor-0 text-sm border-2 border-TextColor-0 cursor-pointer"
-              >
-                <i class="fa-solid fa-chevron-right"></i>
-              </button>
-            </div>
-            <div class="calendar-body2 border-t border-BorderColor-0 pt-4 mt-2">
-              <div class="calendar-weekdays2 grid grid-cols-7 mb-4">
-                <div
-                  class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
+            <div class="hidden md:block">
+              <div class="calendar-header2 flex items-center justify-between">
+                <button
+                  id="prev2"
+                  class="size-[30px] rounded-full flex items-center justify-center text-TextColor-0 text-sm border-2 border-TextColor-0 cursor-pointer"
                 >
-                  Mon
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="text-center">
+                  <div
+                    id="month2"
+                    class="font-Poppins font-semibold text-xl text-TextColor-0"
+                  ></div>
+                  <div
+                    id="year2"
+                    class="font-Poppins text-lg text-TextColor2-0 -mt-[3px]"
+                  ></div>
                 </div>
-                <div
-                  class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
+                <button
+                  id="next2"
+                  class="size-[30px] rounded-full flex items-center justify-center text-TextColor-0 text-sm border-2 border-TextColor-0 cursor-pointer"
                 >
-                  Tue
-                </div>
-                <div
-                  class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
-                >
-                  Wed
-                </div>
-                <div
-                  class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
-                >
-                  Thu
-                </div>
-                <div
-                  class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
-                >
-                  Fri
-                </div>
-                <div
-                  class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
-                >
-                  Sat
-                </div>
-                <div
-                  class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
-                >
-                  Sun
-                </div>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
               </div>
               <div
-                class="calendar-days2 grid grid-cols-7"
-                id="calendar-days2"
-              ></div>
+                class="calendar-body2 border-t border-BorderColor-0 pt-4 mt-2"
+              >
+                <div class="calendar-weekdays2 grid grid-cols-7 mb-4">
+                  <div
+                    class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
+                  >
+                    Mon
+                  </div>
+                  <div
+                    class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
+                  >
+                    Tue
+                  </div>
+                  <div
+                    class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
+                  >
+                    Wed
+                  </div>
+                  <div
+                    class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
+                  >
+                    Thu
+                  </div>
+                  <div
+                    class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
+                  >
+                    Fri
+                  </div>
+                  <div
+                    class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
+                  >
+                    Sat
+                  </div>
+                  <div
+                    class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
+                  >
+                    Sun
+                  </div>
+                </div>
+                <div
+                  class="calendar-days2 grid grid-cols-7"
+                  id="calendar-days2"
+                ></div>
+              </div>
+            </div>
+            <div class="bg-white overflow-hidden md:hidden">
+              <div class="relative flex items-center justify-between py-5">
+                <h6 class="px-3 py-[6px] font-Poppins text-TextDark-0 text-sm font-medium rounded-full border-BorderColor-0 border">Today</h6>
+                <div
+                  id="monthYear"
+                  class="font-Poppins text-TextDark-0 font-semibold"
+                ></div>
+                <span class="text-TextColor-0"><i class="fa-regular fa-calendar-days"></i></span>
+              </div>
+              <div class="border-y border-BorderColor-0 relative">
+                <div class="flex justify-between items-center">
+                  <button
+                    id="prev"
+                    class="absolute top-1/2 -translate-y-1/2 left-2 text-gray-200 transition-all duration-500 hover:text-TextColor-0"
+                  >
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+
+                  <button
+                    id="next"
+                    class="absolute top-1/2 -translate-y-1/2 right-2 text-gray-200 transition-all duration-500 hover:text-TextColor-0"
+                  >
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+                <div class="grid grid-cols-7 gap-2 p-4 max-w-[395px] mx-auto">
+                  <div class="text-center font-Poppins text-TextColor-0">
+                    Sun
+                  </div>
+                  <div class="text-center font-Poppins text-TextColor-0">
+                    Mon
+                  </div>
+                  <div class="text-center font-Poppins text-TextColor-0">
+                    Tue
+                  </div>
+                  <div class="text-center font-Poppins text-TextColor-0">
+                    Wed
+                  </div>
+                  <div class="text-center font-Poppins text-TextColor-0">
+                    Thu
+                  </div>
+                  <div class="text-center font-Poppins text-TextColor-0">
+                    Fri
+                  </div>
+                  <div class="text-center font-Poppins text-TextColor-0">
+                    Sat
+                  </div>
+                  <div
+                    id="dates"
+                    class="col-span-7 grid grid-cols-7 gap-2"
+                  ></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div>
+          <div class="col-span-2 md:col-span-1">
             <div class="px-3 mb-6">
-              <div class="flex items-center gap-3">
+              <div class="md:flex items-center gap-3 hidden">
                 <div>
                   <img
                     src="./public/images/calender.png"
@@ -143,110 +202,154 @@
                   Choose a time that works for you
                 </h5>
               </div>
+              <div class="flex justify-center mt-8"><h6 class="px-2 font-Poppins text-white uppercase inline-block mx-auto text-center text-sm font-medium rounded-full bg-PrimaryColor-0 md:hidden">Today</h6></div>
               <p
-                class="font-Poppins font-semibold text-sm text-PrimaryColor-0 text-center mt-5"
+                class="font-Poppins font-semibold text-sm md:text-PrimaryColor-0 text-center mt-2 md:mt-5"
               >
-                Sunday, October, 24th
+                Saturday, October, 26th
               </p>
               <div
-                class="border border-PrimaryColor-0 rounded-[10px] mx-8 overflow-hidden mt-4"
+                class="md:border border-PrimaryColor-0 rounded-[10px] mx-auto md:mx-8 overflow-hidden mt-4"
               >
                 <h6
-                  class="font-Poppins bg-PrimaryColor-0 text-white text-lg leading-8 font-semibold text-center"
+                  class="font-Poppins bg-PrimaryColor-0 text-white text-lg leading-8 font-semibold text-center hidden md:block"
                 >
                   Time Slot
                 </h6>
                 <ul
-                  class="time-btn px-5 mx-2 overflow-hidden overflow-y-auto h-[265px]"
+                  class="time-btn px-5 mx-auto md:mx-2 overflow-hidden overflow-y-auto h-[208px] md:h-[265px]"
                 >
                   <li>
                     <button
-                      class="font-Poppins font-medium w-9/12 mb-1 rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto after:absolute after:rounded-full after:right-0 after:top-0 after:w-[18px] after:h-[18px] after:scale-0 after:transition-all after:duration-500 after:bg-white after:bg-[url(assets./public/images/check.png)] after:border-2 after:border-white"
+                      class="font-Poppins font-medium max-w-[182px] w-9/12 mb-2 md:mb-1 flex justify-center items-center rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto"
                     >
+                      <span
+                        class="absolute -top-[2px] -right-[2px] size-[18px] bg-white rounded-full flex items-center justify-center text-green-500 text-sm border-2 border-white opacity-0"
+                        ><i class="fa-solid fa-circle-check"></i
+                      ></span>
                       9:30 AM
                     </button>
                   </li>
                   <li>
                     <button
-                      class="active font-Poppins font-medium w-9/12 mb-1 rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto after:absolute after:rounded-full after:right-0 after:top-0 after:w-[18px] after:h-[18px] after:scale-0 after:transition-all after:duration-500 after:bg-white after:bg-[url(assets./public/images/check.png)] after:border-2 after:border-white"
+                      class="active font-Poppins font-medium max-w-[182px] w-9/12 mb-2 md:mb-1 flex justify-center items-center rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto"
                     >
+                      <span
+                        class="absolute -top-[2px] -right-[2px] size-[18px] bg-white rounded-full flex items-center justify-center text-green-500 text-sm border-2 border-white opacity-0"
+                        ><i class="fa-solid fa-circle-check"></i
+                      ></span>
                       10:30 AM
                     </button>
                   </li>
                   <li>
                     <button
-                      class="font-Poppins font-medium w-9/12 mb-1 rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto after:absolute after:rounded-full after:right-0 after:top-0 after:w-[18px] after:h-[18px] after:scale-0 after:transition-all after:duration-500 after:bg-white after:bg-[url(assets./public/images/check.png)] after:border-2 after:border-white"
+                      class="font-Poppins font-medium max-w-[182px] w-9/12 mb-2 md:mb-1 flex justify-center items-center rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto"
                     >
+                      <span
+                        class="absolute -top-[2px] -right-[2px] size-[18px] bg-white rounded-full flex items-center justify-center text-green-500 text-sm border-2 border-white opacity-0"
+                        ><i class="fa-solid fa-circle-check"></i
+                      ></span>
                       11:30 AM
                     </button>
                   </li>
                   <li>
                     <button
-                      class="font-Poppins font-medium w-9/12 mb-1 rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto after:absolute after:rounded-full after:right-0 after:top-0 after:w-[18px] after:h-[18px] after:scale-0 after:transition-all after:duration-500 after:bg-white after:bg-[url(assets./public/images/check.png)] after:border-2 after:border-white"
+                      class="font-Poppins font-medium max-w-[182px] w-9/12 mb-2 md:mb-1 flex justify-center items-center rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto"
                     >
+                      <span
+                        class="absolute -top-[2px] -right-[2px] size-[18px] bg-white rounded-full flex items-center justify-center text-green-500 text-sm border-2 border-white opacity-0"
+                        ><i class="fa-solid fa-circle-check"></i
+                      ></span>
                       12:30 PM
                     </button>
                   </li>
                   <li>
                     <button
-                      class="font-Poppins font-medium w-9/12 mb-1 rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto after:absolute after:rounded-full after:right-0 after:top-0 after:w-[18px] after:h-[18px] after:scale-0 after:transition-all after:duration-500 after:bg-white after:bg-[url(assets./public/images/check.png)] after:border-2 after:border-white"
+                      class="font-Poppins font-medium max-w-[182px] w-9/12 mb-2 md:mb-1 flex justify-center items-center rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto"
                     >
+                      <span
+                        class="absolute -top-[2px] -right-[2px] size-[18px] bg-white rounded-full flex items-center justify-center text-green-500 text-sm border-2 border-white opacity-0"
+                        ><i class="fa-solid fa-circle-check"></i
+                      ></span>
                       01:30 PM
                     </button>
                   </li>
                   <li>
                     <button
-                      class="font-Poppins font-medium w-9/12 mb-1 rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto after:absolute after:rounded-full after:right-0 after:top-0 after:w-[18px] after:h-[18px] after:scale-0 after:transition-all after:duration-500 after:bg-white after:bg-[url(assets./public/images/check.png)] after:border-2 after:border-white"
+                      class="font-Poppins font-medium max-w-[182px] w-9/12 mb-2 md:mb-1 flex justify-center items-center rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto"
                     >
+                      <span
+                        class="absolute -top-[2px] -right-[2px] size-[18px] bg-white rounded-full flex items-center justify-center text-green-500 text-sm border-2 border-white opacity-0"
+                        ><i class="fa-solid fa-circle-check"></i
+                      ></span>
                       02:30 PM
                     </button>
                   </li>
                   <li>
                     <button
-                      class="font-Poppins font-medium w-9/12 mb-1 rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto after:absolute after:rounded-full after:right-0 after:top-0 after:w-[18px] after:h-[18px] after:scale-0 after:transition-all after:duration-500 after:bg-white after:bg-[url(assets./public/images/check.png)] after:border-2 after:border-white"
+                      class="font-Poppins font-medium max-w-[182px] w-9/12 mb-2 md:mb-1 flex justify-center items-center rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto"
                     >
+                      <span
+                        class="absolute -top-[2px] -right-[2px] size-[18px] bg-white rounded-full flex items-center justify-center text-green-500 text-sm border-2 border-white opacity-0"
+                        ><i class="fa-solid fa-circle-check"></i
+                      ></span>
                       03:30 PM
                     </button>
                   </li>
                   <li>
                     <button
-                      class="font-Poppins font-medium w-9/12 mb-1 rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto after:absolute after:rounded-full after:right-0 after:top-0 after:w-[18px] after:h-[18px] after:scale-0 after:transition-all after:duration-500 after:bg-white after:bg-[url(assets./public/images/check.png)] after:border-2 after:border-white"
+                      class="font-Poppins font-medium max-w-[182px] w-9/12 mb-2 md:mb-1 flex justify-center items-center rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto"
                     >
+                      <span
+                        class="absolute -top-[2px] -right-[2px] size-[18px] bg-white rounded-full flex items-center justify-center text-green-500 text-sm border-2 border-white opacity-0"
+                        ><i class="fa-solid fa-circle-check"></i
+                      ></span>
                       4:30 PM
                     </button>
                   </li>
                   <li>
                     <button
-                      class="font-Poppins font-medium w-9/12 mb-1 rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto after:absolute after:rounded-full after:right-0 after:top-0 after:w-[18px] after:h-[18px] after:scale-0 after:transition-all after:duration-500 after:bg-white after:bg-[url(assets./public/images/check.png)] after:border-2 after:border-white"
+                      class="font-Poppins font-medium max-w-[182px] w-9/12 mb-2 md:mb-1 flex justify-center items-center rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto"
                     >
+                      <span
+                        class="absolute -top-[2px] -right-[2px] size-[18px] bg-white rounded-full flex items-center justify-center text-green-500 text-sm border-2 border-white opacity-0"
+                        ><i class="fa-solid fa-circle-check"></i
+                      ></span>
                       5:30 PM
                     </button>
                   </li>
                   <li>
                     <button
-                      class="font-Poppins font-medium w-9/12 mb-1 rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto after:absolute after:rounded-full after:right-0 after:top-0 after:w-[18px] after:h-[18px] after:scale-0 after:transition-all after:duration-500 after:bg-white after:bg-[url(assets./public/images/check.png)] after:border-2 after:border-white"
+                      class="font-Poppins font-medium max-w-[182px] w-9/12 mb-2 md:mb-1 flex justify-center items-center rounded-full sm:rounded-none sm:mb-0 mx-auto text-TextColor-0 border-x border-y border-PrimaryColor-0 sm:text-TextColor-0 text-lg sm:w-full py-2 sm:border-b sm:border-x-0 sm:border-t-0 sm:border-BorderColor2-0 relative z-10 transition-all duration-500 hover:text-white sm:hover:text-PrimaryColor-0 before:absolute before:bottom-0 before:top-auto before:left-1/2 sm:before:left-0 before:bg-PrimaryColor-0 sm:before:bg-white before:h-full sm:before:h-0 before:w-0 sm:before:w-full before:rounded-full sm:before:rounded-none before:transition-all before:duration-500 before:-z-10 hover:before:w-full hover:before:left-0 sm:hover:before:h-full hover:before:top-0 hover:before:bottom-auto"
                     >
+                      <span
+                        class="absolute -top-[2px] -right-[2px] size-[18px] bg-white rounded-full flex items-center justify-center text-green-500 text-sm border-2 border-white opacity-0"
+                        ><i class="fa-solid fa-circle-check"></i
+                      ></span>
                       6:30 AM
                     </button>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="relative inline-block w-full px-10">
-              <div class="relative w-full">
+            <div class="relative inline-block w-full px-10 border-t md:border-0 border-BorderColor-0 pt-2 md:pt-0">
+              <div
+                class="relative w-full max-w-[280px] md:max-w-[inherit] mx-auto px-10 md:px-0"
+              >
                 <span
-                  class="absolute top-1/2 -translate-y-1/2 left-2 text-orange-400 text-lg"
+                  class="absolute top-1/2 -translate-y-1/2 left-2 text-TextGrey2-0 md:text-orange-400 text-base md:text-lg"
                   ><i class="fa-solid fa-globe"></i
                 ></span>
                 <select
                   id="timezone"
                   name="timezone"
-                  class="block appearance-none font-Poppins font-medium text-sm w-full bg-orange-100 border border-orange-200 focus:bg-orange-100 text-gray-700 py-[14px] pl-8 pr-8 rounded leading-tight cursor-pointer focus:outline-none focus:border-gray-500 overflow-hidden overflow-y-auto"
+                  class="block appearance-none font-Poppins font-medium text-sm w-full bg-gray-100 border-gray-200 md:bg-orange-100 border md:border-orange-200 focus:bg-orange-100 text-gray-700 py-2 md:py-[14px] pl-8 pr-8 rounded-full md:rounded leading-tight cursor-pointer focus:outline-none focus:border-gray-500 overflow-hidden overflow-y-auto"
                 >
                   <option
                     value=""
                     disabled
                     selected
+                    class="!text-xs"
                   >
                     Time Zone
                   </option>
@@ -277,7 +380,7 @@
                   <option value="UTC+12">UTC+12:00</option>
                 </select>
                 <div
-                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-orange-400"
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-TextGrey2-0 md:text-orange-400"
                 >
                   <svg
                     class="fill-current h-7 w-7"
@@ -293,12 +396,12 @@
             </div>
             <div
               id="current-time"
-              class="my-[26px] mx-10 text-TextColor-0 font-Poppins font-medium"
+              class="my-[26px] text-center md:text-left mx-auto md:mx-10 text-TextColor-0 font-Poppins font-medium"
             ></div>
           </div>
         </div>
       </div>
-      <div class="flex justify-end mt-9 mb-24">
+      <div class="md:flex justify-end mt-9 mb-24 hidden">
         <button
           class="font-Poppins font-medium text-xl bg-PrimaryColor-0 py-[14px] px-[58px] rounded-full text-white inline-block tracking-wide"
         >
