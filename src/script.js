@@ -84,7 +84,6 @@ nextButton2.addEventListener('click', () => {
 
 renderCalendar2();
 
-
 //Time Button Active
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -99,8 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
-
 
 /* Custom Time Zone Select */
 
@@ -120,3 +117,4 @@ function displayCurrentTime(timeZone) {
     utcOffset >= 0 ? '+' : ''
   }${utcOffset}:00)`;
 }
+
