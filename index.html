@@ -35,7 +35,7 @@
     </div>
     <hr class="h-[13px] w-full bg-PrimaryColor-0" />
     <div class="max-w-[942px] w-full mx-auto">
-      <div class="flex justify-center mt-[46px]">
+      <div class="flex justify-center mt-5">
         <div class="pl-7 pr-5 py-10 rounded-[30px] bg-PrimaryColor2-0">
           <img
             src="./public/images/logo.png"
@@ -45,21 +45,25 @@
         </div>
       </div>
       <h3
-        class="font-Poppins text-center text-3xl font-semibold text-HeadingColor-0 mt-[34px]"
+        class="font-Poppins text-center text-3xl font-semibold text-HeadingColor-0 mt-2"
       >
         Canva
       </h3>
-      <div class="md:border rounded-[30px] border-BorderColor-0 mt-6 md:mt-11">
+      <div class="md:border rounded-[30px] border-BorderColor-0 mt-3">
         <div class="-mt-4 flex justify-center">
           <h4
             class="font-Poppins font-bold text-[22px] text-TextColor-0 text-center bg-white px-[18px] hidden md:block"
           >
             Choose Date & Time
           </h4>
-          <p class="font-Poppins text-TextColor-0 pb-6 md:hidden">Choose a time that work for you.</p>
+          <p class="font-Poppins text-TextColor-0 md:hidden">
+            Choose a time that work for you.
+          </p>
         </div>
-        <div class="grid grid-cols-2 lg:grid-cols-3 items-start mt-[26px]">
-          <div class="col-span-2 calendar2 px-10 w-full overflow-hidden">
+        <div class="grid grid-cols-2 lg:grid-cols-3 items-start md:mt-5">
+          <div
+            class="col-span-2 calendar2 px-4 sm:px-10 w-full overflow-hidden"
+          >
             <div class="hidden md:block">
               <div class="calendar-header2 flex items-center justify-between">
                 <button
@@ -132,26 +136,32 @@
               </div>
             </div>
             <div class="bg-white overflow-hidden md:hidden">
-              <div class="relative flex items-center justify-between py-5">
-                <h6 class="px-3 py-[6px] font-Poppins text-TextDark-0 text-sm font-medium rounded-full border-BorderColor-0 border">Today</h6>
+              <div class="relative flex items-center justify-between py-3">
+                <h6
+                  class="px-3 py-[6px] font-Poppins text-TextDark-0 text-sm font-medium rounded-full border-BorderColor-0 border"
+                >
+                  Today
+                </h6>
                 <div
                   id="monthYear"
                   class="font-Poppins text-TextDark-0 font-semibold"
                 ></div>
-                <span class="text-TextColor-0"><i class="fa-regular fa-calendar-days"></i></span>
+                <span class="text-TextColor-0"
+                  ><i class="fa-regular fa-calendar-days"></i
+                ></span>
               </div>
               <div class="border-y border-BorderColor-0 relative">
                 <div class="flex justify-between items-center">
                   <button
                     id="prev"
-                    class="absolute top-1/2 -translate-y-1/2 left-2 text-gray-200 transition-all duration-500 hover:text-TextColor-0"
+                    class="absolute top-1/2 -translate-y-1/2 left-0 sm:left-2 text-gray-300 transition-all duration-500 hover:text-TextColor-0"
                   >
                     <i class="fa-solid fa-chevron-left"></i>
                   </button>
 
                   <button
                     id="next"
-                    class="absolute top-1/2 -translate-y-1/2 right-2 text-gray-200 transition-all duration-500 hover:text-TextColor-0"
+                    class="absolute top-1/2 -translate-y-1/2 right-0 sm:right-2 text-gray-300 transition-all duration-500 hover:text-TextColor-0"
                   >
                     <i class="fa-solid fa-chevron-right"></i>
                   </button>
@@ -187,7 +197,7 @@
             </div>
           </div>
           <div class="col-span-2 md:col-span-1">
-            <div class="px-3 mb-6">
+            <div class="px-3 mb-2">
               <div class="md:flex items-center gap-3 hidden">
                 <div>
                   <img
@@ -202,7 +212,13 @@
                   Choose a time that works for you
                 </h5>
               </div>
-              <div class="flex justify-center mt-8"><h6 class="px-2 font-Poppins text-white uppercase inline-block mx-auto text-center text-sm font-medium rounded-full bg-PrimaryColor-0 md:hidden">Today</h6></div>
+              <div class="flex justify-center mt-2">
+                <h6
+                  class="px-2 font-Poppins text-white uppercase inline-block mx-auto text-center text-sm font-medium rounded-full bg-PrimaryColor-0 md:hidden"
+                >
+                  Today
+                </h6>
+              </div>
               <p
                 class="font-Poppins font-semibold text-sm md:text-PrimaryColor-0 text-center mt-2 md:mt-5"
               >
@@ -217,7 +233,7 @@
                   Time Slot
                 </h6>
                 <ul
-                  class="time-btn px-5 mx-auto md:mx-2 overflow-hidden overflow-y-auto h-[208px] md:h-[265px]"
+                  class="time-btn px-5 mx-auto md:mx-2 overflow-hidden overflow-y-auto h-[212px] md:h-[265px]"
                 >
                   <li>
                     <button
@@ -332,7 +348,9 @@
                 </ul>
               </div>
             </div>
-            <div class="relative inline-block w-full px-10 border-t md:border-0 border-BorderColor-0 pt-2 md:pt-0">
+            <div
+              class="relative inline-block w-full px-10 border-t md:border-0 border-BorderColor-0 pt-2 md:pt-0"
+            >
               <div
                 class="relative w-full max-w-[280px] md:max-w-[inherit] mx-auto px-10 md:px-0"
               >

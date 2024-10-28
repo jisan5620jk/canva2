@@ -820,12 +820,16 @@ video {
   bottom: 2rem;
 }
 
+.left-12{
+  left: 3rem;
+}
+
 .left-2{
   left: 0.5rem;
 }
 
-.right-0{
-  right: 0px;
+.right-10{
+  right: 2.5rem;
 }
 
 .right-2{
@@ -848,12 +852,12 @@ video {
   top: 0.75rem;
 }
 
-.left-12{
-  left: 3rem;
+.left-0{
+  left: 0px;
 }
 
-.right-10{
-  right: 2.5rem;
+.right-0{
+  right: 0px;
 }
 
 .z-10{
@@ -959,6 +963,10 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-7{
+  margin-top: 1.75rem;
+}
+
 .mt-8{
   margin-top: 2rem;
 }
@@ -983,8 +991,8 @@ video {
   margin-top: 46px;
 }
 
-.mt-7{
-  margin-top: 1.75rem;
+.mb-5{
+  margin-bottom: 1.25rem;
 }
 
 .block{
@@ -1032,6 +1040,14 @@ video {
 
 .h-\[208px\]{
   height: 208px;
+}
+
+.h-\[212px\]{
+  height: 212px;
+}
+
+.h-\[210px\]{
+  height: 210px;
 }
 
 .w-7{
@@ -1385,6 +1401,16 @@ video {
   padding-bottom: 82px;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .pb-6{
   padding-bottom: 1.5rem;
 }
@@ -1586,6 +1612,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-gray-300{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
 .opacity-0{
   opacity: 0;
 }
@@ -1710,6 +1741,14 @@ video {
 }
 
 @media (min-width: 640px){
+  .sm\:left-2{
+    left: 0.5rem;
+  }
+
+  .sm\:right-2{
+    right: 0.5rem;
+  }
+
   .sm\:mb-0{
     margin-bottom: 0px;
   }
@@ -1738,6 +1777,16 @@ video {
   .sm\:border-BorderColor2-0{
     --tw-border-opacity: 1;
     border-color: rgb(226 226 226 / var(--tw-border-opacity));
+  }
+
+  .sm\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .sm\:px-3{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .sm\:text-TextColor-0{
@@ -1822,12 +1871,12 @@ video {
     margin-top: 1.25rem;
   }
 
-  .md\:mt-\[46px\]{
-    margin-top: 46px;
-  }
-
   .md\:mt-\[34px\]{
     margin-top: 34px;
+  }
+
+  .md\:mt-\[46px\]{
+    margin-top: 46px;
   }
 
   .md\:block{
@@ -1884,6 +1933,10 @@ video {
 
   .md\:pt-0{
     padding-top: 0px;
+  }
+
+  .md\:pb-6{
+    padding-bottom: 1.5rem;
   }
 
   .md\:text-left{
