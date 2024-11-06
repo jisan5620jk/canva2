@@ -97,7 +97,56 @@ div.today {
   border-radius: 50%;
 }
 
+
 .event2 {
+  border: 2px solid #007bff;
+  border-radius: 50%;
+}
+
+.calendar-days3 div {
+  text-transform: uppercase;
+  color: #dddddd;
+  font-weight: 500;
+  font-family: 'Poppins';
+  text-align: center;
+  width: 37px;
+  height: 37px;
+  line-height: 37px;
+  border-radius: 5px;
+  transition: all 0.5s;
+  margin: 13px auto;
+}
+
+.calendar-days3 div:hover {
+  background-color: #f2f6ff;
+  color: #999999;
+}
+
+.calendar-days3 div.today2 {
+  filter: drop-shadow(0px 3px 9px rgba(0, 102, 139, 0.22));
+  background-color: #0899cd;
+  color: #fff;
+}
+
+.calendar-weekdays3 {
+  font-weight: bold;
+}
+
+.calendar-days3 div {
+  cursor: pointer;
+}
+
+.calendar-days3 div:hover {
+  background: #f0f0f0;
+}
+
+.today3 {
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+}
+
+.event3 {
   border: 2px solid #007bff;
   border-radius: 50%;
 }
@@ -148,29 +197,9 @@ div.today {
 
 /* Calendar Tab */
 
-.tab-content {
-  position: fixed;
-  z-index: 99;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  border-radius: 12px;
-  padding: 40px 50px;
-  filter: drop-shadow(2.237px 3.316px 20px rgba(8, 153, 205, 0.15));
-  max-width: 550px;
-  width: 100%;
-  transition: all 0.5s ease-in;
-}
-
 .tab-content.active {
   display: block;
-  transform: translate(-50%, -50%) scale(1);
   transition: all 0.5s ease-in;
-}
-
-.close-btn {
-  @apply absolute top-3 right-3 font-Poppins text-red-600 font-medium px-3 py-1 rounded-md border border-red-600 transition-all duration-500 hover:bg-red-600 hover:text-white;
 }
 
 /* Mobile Calendar */
@@ -245,6 +274,44 @@ div#dates2 div.today-date span {
 }
 
 div#dates2 div span {
+  top: -6px;
+  right: -6px;
+}
+
+/* ======================== */
+
+div#dates3 div {
+  width: 40px;
+  height: 40px;
+  color: #c1c0c0;
+  transition: all 0.5s;
+}
+
+div#dates3 div:hover {
+  color: #262626;
+}
+
+div#dates3 div.today-date {
+  color: #fff;
+}
+
+div#dates3 div:after {
+  position: absolute;
+  content: '';
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+div#dates3 div.today-date span {
+  opacity: 1;
+}
+
+div#dates3 div span {
   top: -6px;
   right: -6px;
 }

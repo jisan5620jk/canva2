@@ -62,167 +62,27 @@
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-3 items-start md:mt-5">
           <div
-            class="col-span-2 calendar2 px-4 sm:px-10 w-full overflow-hidden"
+            class="col-span-2 calendar2 px-4 sm:px-10 w-full overflow-hidden relative z-40"
           >
-            <div class="hidden md:block relative z-50">
-              <div class="absolute z-50 top-3 right-[11%]">
-                <ul class="flex items-center gap-2">
-                  <li>
-                    <button
-                      class="tab-btn font-Poppins text-sm text-HeadingColor-0 font-medium hover:text-PrimaryColor-0 px-3 py-1 rounded-md border border-BorderColor-0 transition-all duration-500 hover:border-PrimaryColor-0"
-                    >
-                      Day
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      class="tab-btn font-Poppins text-sm text-HeadingColor-0 font-medium hover:text-PrimaryColor-0 px-3 py-1 rounded-md border border-BorderColor-0 transition-all duration-500 hover:border-PrimaryColor-0"
-                    >
-                      Month
-                    </button>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <div class="tab-content hidden">
-                  <div class="bg-white overflow-hidden">
-                    <div
-                      class="relative flex items-center justify-between py-3"
-                    >
-                      <h6
-                        class="px-3 py-[6px] font-Poppins text-TextDark-0 text-sm font-medium rounded-full border-BorderColor-0 border"
-                      >
-                        Today
-                      </h6>
-                      <div
-                        id="monthYear2"
-                        class="font-Poppins text-TextDark-0 font-semibold"
-                      ></div>
-                      <span class="text-TextColor-0"
-                        ><i class="fa-regular fa-calendar-days"></i
-                      ></span>
-                    </div>
-                    <div class="border-y border-BorderColor-0 relative">
-                      <div class="flex justify-between items-center">
-                        <button
-                          id="prev2"
-                          class="absolute top-1/2 -translate-y-1/2 left-0 sm:left-2 text-gray-300 transition-all duration-500 hover:text-TextColor-0"
-                        >
-                          <i class="fa-solid fa-chevron-left"></i>
-                        </button>
-                        <button
-                          id="next2"
-                          class="absolute top-1/2 -translate-y-1/2 right-0 sm:right-2 text-gray-300 transition-all duration-500 hover:text-TextColor-0"
-                        >
-                          <i class="fa-solid fa-chevron-right"></i>
-                        </button>
-                      </div>
-                      <div
-                        class="grid grid-cols-7 gap-2 p-4 max-w-[395px] mx-auto"
-                      >
-                        <div class="text-center font-Poppins text-TextColor-0">
-                          Sun
-                        </div>
-                        <div class="text-center font-Poppins text-TextColor-0">
-                          Mon
-                        </div>
-                        <div class="text-center font-Poppins text-TextColor-0">
-                          Tue
-                        </div>
-                        <div class="text-center font-Poppins text-TextColor-0">
-                          Wed
-                        </div>
-                        <div class="text-center font-Poppins text-TextColor-0">
-                          Thu
-                        </div>
-                        <div class="text-center font-Poppins text-TextColor-0">
-                          Fri
-                        </div>
-                        <div class="text-center font-Poppins text-TextColor-0">
-                          Sat
-                        </div>
-                        <div
-                          id="dates2"
-                          class="col-span-7 grid grid-cols-7 gap-2"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-content hidden">
-                  <div
-                    class="calendar-header flex items-center justify-between"
+            <div class="absolute z-50 top-3 right-[12%] md:right-[18%]">
+              <ul class="flex items-center gap-2">
+                <li>
+                  <button
+                    class="tab-btn font-Poppins text-sm text-HeadingColor-0 font-medium hover:text-PrimaryColor-0 px-3 py-1 rounded-md border border-BorderColor-0 transition-all duration-500 hover:border-PrimaryColor-0"
                   >
-                    <button
-                      id="prev"
-                      class="size-[30px] rounded-full flex items-center justify-center text-TextColor-0 text-sm border-2 border-TextColor-0 cursor-pointer"
-                    >
-                      <i class="fa-solid fa-chevron-left"></i>
-                    </button>
-                    <div class="text-center">
-                      <div
-                        id="month"
-                        class="font-Poppins font-semibold text-xl text-TextColor-0"
-                      ></div>
-                      <div
-                        id="year"
-                        class="font-Poppins text-lg text-TextColor2-0 -mt-[3px]"
-                      ></div>
-                    </div>
-                    <button
-                      id="next"
-                      class="size-[30px] rounded-full flex items-center justify-center text-TextColor-0 text-sm border-2 border-TextColor-0 cursor-pointer"
-                    >
-                      <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                  </div>
-                  <div
-                    class="calendar-body border-t border-BorderColor-0 pt-4 mt-2"
+                    Month
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="tab-btn font-Poppins text-sm text-HeadingColor-0 font-medium hover:text-PrimaryColor-0 px-3 py-1 rounded-md border border-BorderColor-0 transition-all duration-500 hover:border-PrimaryColor-0"
                   >
-                    <div class="calendar-weekdays2 grid grid-cols-7 mb-4">
-                      <div
-                        class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
-                      >
-                        Mon
-                      </div>
-                      <div
-                        class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
-                      >
-                        Tue
-                      </div>
-                      <div
-                        class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
-                      >
-                        Wed
-                      </div>
-                      <div
-                        class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
-                      >
-                        Thu
-                      </div>
-                      <div
-                        class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
-                      >
-                        Fri
-                      </div>
-                      <div
-                        class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
-                      >
-                        Sat
-                      </div>
-                      <div
-                        class="font-Poppins font-bold text-TextColor-0 uppercase text-center"
-                      >
-                        Sun
-                      </div>
-                    </div>
-                    <div
-                      class="calendar-days grid grid-cols-7"
-                      id="calendar-days"
-                    ></div>
-                  </div>
-                </div>
-              </div>
+                    Day
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content active hidden">
               <div class="calendar-header2 flex items-center justify-between">
                 <button
                   id="prev2"
@@ -240,6 +100,7 @@
                     class="font-Poppins text-lg text-TextColor2-0 -mt-[3px]"
                   ></div>
                 </div>
+                <div></div>
                 <button
                   id="next2"
                   class="size-[30px] rounded-full flex items-center justify-center text-TextColor-0 text-sm border-2 border-TextColor-0 cursor-pointer"
@@ -293,7 +154,7 @@
                 ></div>
               </div>
             </div>
-            <div class="bg-white overflow-hidden md:hidden">
+            <div class="tab-content hidden bg-white overflow-hidden">
               <div class="relative flex items-center justify-between py-3">
                 <h6
                   class="px-3 py-[6px] font-Poppins text-TextDark-0 text-sm font-medium rounded-full border-BorderColor-0 border"
@@ -304,6 +165,8 @@
                   id="monthYear"
                   class="font-Poppins text-TextDark-0 font-semibold"
                 ></div>
+                <div></div>
+                <div></div>
                 <span class="text-TextColor-0"
                   ><i class="fa-regular fa-calendar-days"></i
                 ></span>
