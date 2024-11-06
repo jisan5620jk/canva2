@@ -45,110 +45,15 @@
 
 /* Calender CSS */
 
-.calendar {
-  width: 100%;
-  overflow: hidden;
-}
-
-.calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 28px;
-}
-
-#month {
-  font-size: 30px;
-  line-height: 18px;
-  color: #002931;
-  font-weight: 500;
-  font-family: 'Poppins';
-  text-align: center;
-}
-
-#year {
-  font-size: 18px;
-  line-height: 18px;
-  color: #777777;
-  font-weight: 500;
-  font-family: 'Poppins';
-  padding-top: 12px;
-}
-
-.calendar-header button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.calendar-body {
-  padding: 10px;
-}
-
-.calendar-weekdays,
-.calendar-days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-}
-
-.calendar-weekdays div {
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #777777;
-  text-align: center;
-  font-weight: 700;
-  font-family: 'Poppins', 'sans-serif';
-  margin: 7px auto 20px;
-}
-
-.calendar-days div {
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #dddddd;
-  font-weight: 600;
-  font-family: 'Poppins';
-  text-align: center;
-  width: 37px;
-  height: 37px;
-  line-height: 37px;
-  border-radius: 30px;
-  transition: all 0.5s;
-  margin: 13px auto;
-}
-
-.calendar-days div:hover {
-  background-color: #ebeef0;
-  color: #555555;
-}
-
-.calendar-days div.today {
+div.today {
   filter: drop-shadow(2.237px 3.316px 4.5px rgba(8, 153, 205, 0.45));
   background-color: #0899cd;
   color: #fff;
 }
 
-.calendar-weekdays {
-  font-weight: bold;
-}
-
-.calendar-days div {
-  cursor: pointer;
-}
-
-.calendar-days div:hover {
-  background: #f0f0f0;
-}
-
 .today {
   background: #007bff;
   color: white;
-  border-radius: 50%;
-}
-
-.event {
-  border: 2px solid #007bff;
-  border-radius: 50%;
 }
 
 .calendar-days2 div {
@@ -199,13 +104,108 @@
   border-radius: 50%;
 }
 
+/* Tab Calendar */
+
+.calendar-days div {
+  text-transform: uppercase;
+  color: #dddddd;
+  font-weight: 500;
+  font-family: 'Poppins';
+  text-align: center;
+  width: 37px;
+  height: 37px;
+  line-height: 37px;
+  border-radius: 5px;
+  transition: all 0.5s;
+  margin: 13px auto;
+}
+
+.calendar-days div:hover {
+  background-color: #f2f6ff;
+  color: #999999;
+}
+
+.calendar-weekdays {
+  font-weight: bold;
+}
+
+.calendar-days div {
+  cursor: pointer;
+}
+
+.calendar-days div:hover {
+  background: #f0f0f0;
+}
+
+.today {
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+}
+
+.event {
+  border: 2px solid #007bff;
+  border-radius: 50%;
+}
+
+/* Calendar Tab */
+
+.tab-content {
+  position: fixed;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 50px;
+  filter: drop-shadow(2.237px 3.316px 20px rgba(8, 153, 205, 0.15));
+  max-width: 550px;
+  width: 100%;
+  transition: all 0.5s ease-in;
+}
+
+.tab-content.active {
+  display: block;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.5s ease-in;
+}
+
+.close-btn{
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(220 38 38 / var(--tw-border-opacity));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.close-btn:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 /* Mobile Calendar */
 
 div#dates div {
   width: 40px;
   height: 40px;
   color: #c1c0c0;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 div#dates div:hover {
@@ -216,7 +216,7 @@ div#dates div.today-date {
   color: #fff;
 }
 
-div#dates div:after  {
+div#dates div:after {
   position: absolute;
   content: '';
   bottom: 4px;
@@ -228,11 +228,49 @@ div#dates div:after  {
   background: #fff;
 }
 
-div#dates div.today-date span{
+div#dates div.today-date span {
   opacity: 1;
 }
 
-div#dates div span{
+div#dates div span {
+  top: -6px;
+  right: -6px;
+}
+
+/* Tab Calendar Moblie */
+
+div#dates2 div {
+  width: 40px;
+  height: 40px;
+  color: #c1c0c0;
+  transition: all 0.5s;
+}
+
+div#dates2 div:hover {
+  color: #262626;
+}
+
+div#dates2 div.today-date {
+  color: #fff;
+}
+
+div#dates2 div:after {
+  position: absolute;
+  content: '';
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+div#dates2 div.today-date span {
+  opacity: 1;
+}
+
+div#dates2 div span {
   top: -6px;
   right: -6px;
 }
@@ -820,20 +858,20 @@ video {
   bottom: 2rem;
 }
 
+.left-0{
+  left: 0px;
+}
+
 .left-12{
   left: 3rem;
 }
 
-.left-2{
-  left: 0.5rem;
+.right-0{
+  right: 0px;
 }
 
 .right-10{
   right: 2.5rem;
-}
-
-.right-2{
-  right: 0.5rem;
 }
 
 .right-4{
@@ -844,6 +882,10 @@ video {
   right: 1.25rem;
 }
 
+.right-\[11\%\]{
+  right: 11%;
+}
+
 .top-1\/2{
   top: 50%;
 }
@@ -852,16 +894,12 @@ video {
   top: 0.75rem;
 }
 
-.left-0{
-  left: 0px;
-}
-
-.right-0{
-  right: 0px;
-}
-
 .z-10{
   z-index: 10;
+}
+
+.z-50{
+  z-index: 50;
 }
 
 .col-span-2{
@@ -870,6 +908,16 @@ video {
 
 .col-span-7{
   grid-column: span 7 / span 7;
+}
+
+.mx-6{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.mx-7{
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
 }
 
 .mx-\[50px\]{
@@ -903,10 +951,6 @@ video {
   margin-bottom: 0.25rem;
 }
 
-.mb-10{
-  margin-bottom: 2.5rem;
-}
-
 .mb-2{
   margin-bottom: 0.5rem;
 }
@@ -917,10 +961,6 @@ video {
 
 .mb-4{
   margin-bottom: 1rem;
-}
-
-.mb-6{
-  margin-bottom: 1.5rem;
 }
 
 .mr-1{
@@ -939,10 +979,6 @@ video {
   margin-top: 2.5rem;
 }
 
-.mt-11{
-  margin-top: 2.75rem;
-}
-
 .mt-2{
   margin-top: 0.5rem;
 }
@@ -959,40 +995,12 @@ video {
   margin-top: 1.25rem;
 }
 
-.mt-6{
-  margin-top: 1.5rem;
-}
-
-.mt-7{
-  margin-top: 1.75rem;
-}
-
-.mt-8{
-  margin-top: 2rem;
-}
-
 .mt-9{
   margin-top: 2.25rem;
 }
 
 .mt-\[22px\]{
   margin-top: 22px;
-}
-
-.mt-\[26px\]{
-  margin-top: 26px;
-}
-
-.mt-\[34px\]{
-  margin-top: 34px;
-}
-
-.mt-\[46px\]{
-  margin-top: 46px;
-}
-
-.mb-5{
-  margin-bottom: 1.25rem;
 }
 
 .block{
@@ -1038,16 +1046,8 @@ video {
   height: 13px;
 }
 
-.h-\[208px\]{
-  height: 208px;
-}
-
 .h-\[212px\]{
   height: 212px;
-}
-
-.h-\[210px\]{
-  height: 210px;
 }
 
 .w-7{
@@ -1163,6 +1163,10 @@ video {
 
 .rounded-full{
   border-radius: 9999px;
+}
+
+.rounded-md{
+  border-radius: 0.375rem;
 }
 
 .border{
@@ -1326,14 +1330,14 @@ video {
   padding-right: 0.75rem;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-
-.px-9{
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
 }
 
 .px-\[14px\]{
@@ -1356,6 +1360,11 @@ video {
   padding-right: 58px;
 }
 
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-10{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -1366,9 +1375,9 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-5{
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .py-\[11px\]{
@@ -1399,20 +1408,6 @@ video {
 .py-\[82px\]{
   padding-top: 82px;
   padding-bottom: 82px;
-}
-
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-3{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.pb-6{
-  padding-bottom: 1.5rem;
 }
 
 .pb-\[50px\]{
@@ -1583,9 +1578,9 @@ video {
   color: rgb(93 50 5 / var(--tw-text-opacity));
 }
 
-.text-gray-200{
+.text-gray-300{
   --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .text-gray-500{
@@ -1610,11 +1605,6 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-gray-300{
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .opacity-0{
@@ -1693,6 +1683,16 @@ video {
 .before\:duration-500::before{
   content: var(--tw-content);
   transition-duration: 500ms;
+}
+
+.hover\:border-PrimaryColor-0:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(29 161 243 / var(--tw-border-opacity));
+}
+
+.hover\:text-PrimaryColor-0:hover{
+  --tw-text-opacity: 1;
+  color: rgb(29 161 243 / var(--tw-text-opacity));
 }
 
 .hover\:text-TextColor-0:hover{
@@ -1784,11 +1784,6 @@ video {
     padding-right: 2.5rem;
   }
 
-  .sm\:px-3{
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
   .sm\:text-TextColor-0{
     --tw-text-opacity: 1;
     color: rgb(153 153 153 / var(--tw-text-opacity));
@@ -1844,6 +1839,11 @@ video {
     grid-column: span 1 / span 1;
   }
 
+  .md\:mx-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .md\:mx-10{
     margin-left: 2.5rem;
     margin-right: 2.5rem;
@@ -1859,24 +1859,22 @@ video {
     margin-right: 2rem;
   }
 
+  .md\:mx-\[50px\]{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .md\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .md\:mb-1{
     margin-bottom: 0.25rem;
   }
 
-  .md\:mt-11{
-    margin-top: 2.75rem;
-  }
-
   .md\:mt-5{
     margin-top: 1.25rem;
-  }
-
-  .md\:mt-\[34px\]{
-    margin-top: 34px;
-  }
-
-  .md\:mt-\[46px\]{
-    margin-top: 46px;
   }
 
   .md\:block{
@@ -1897,6 +1895,10 @@ video {
 
   .md\:max-w-\[inherit\]{
     max-width: inherit;
+  }
+
+  .md\:justify-end{
+    justify-content: flex-end;
   }
 
   .md\:rounded{
@@ -1926,6 +1928,11 @@ video {
     padding-right: 0px;
   }
 
+  .md\:px-9{
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+
   .md\:py-\[14px\]{
     padding-top: 14px;
     padding-bottom: 14px;
@@ -1935,16 +1942,17 @@ video {
     padding-top: 0px;
   }
 
-  .md\:pb-6{
-    padding-bottom: 1.5rem;
-  }
-
   .md\:text-left{
     text-align: left;
   }
 
   .md\:text-lg{
     font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-xl{
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 

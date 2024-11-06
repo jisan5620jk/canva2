@@ -84,6 +84,93 @@ nextButton2.addEventListener('click', () => {
 
 renderCalendar2();
 
+/* Tab Calendar Month */
+
+const calendarDays = document.getElementById('calendar-days');
+const month = document.getElementById('month');
+const year = document.getElementById('year');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
+let date = new Date();
+let currentMonth = date.getMonth();
+let currentYear = date.getFullYear();
+
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
+function renderCalendar() {
+  date.setDate(1);
+  const firstDayIndex = date.getDay() - 1;
+  const lastDay = new Date(currentYear, currentMonth + 1, 0).getDate();
+  const prevLastDay = new Date(currentYear, currentMonth, 0).getDate();
+  const nextDays = 7 - new Date(currentYear, currentMonth + 1, 0).getDay();
+
+  month.innerHTML = `${months[currentMonth]}`;
+  year.innerHTML = `${currentYear}`;
+
+  let days = '';
+
+  for (let x = firstDayIndex; x > 0; x--) {
+    days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+  }
+
+  for (let i = 1; i <= lastDay; i++) {
+    if (
+      i === new Date().getDate() &&
+      currentMonth === new Date().getMonth() &&
+      currentYear === new Date().getFullYear()
+    ) {
+      days += `<div class="today">${i}</div>`;
+    } else {
+      days += `<div>${i}</div>`;
+    }
+  }
+
+  for (let j = 1; j <= nextDays; j++) {
+    days += `<div class="next-date">${j}</div>`;
+  }
+
+  calendarDays.innerHTML = days;
+}
+
+prevButton.addEventListener('click', () => {
+  currentMonth--;
+  if (currentMonth < 0) {
+    currentMonth = 11;
+    currentYear--;
+  }
+  date.setMonth(currentMonth);
+  date.setFullYear(currentYear);
+  renderCalendar();
+});
+
+nextButton.addEventListener('click', () => {
+  currentMonth++;
+  if (currentMonth > 11) {
+    currentMonth = 0;
+    currentYear++;
+  }
+  date.setMonth(currentMonth);
+  date.setFullYear(currentYear);
+  renderCalendar();
+});
+
+renderCalendar();
+
+
 //Time Button Active
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -117,7 +204,39 @@ function displayCurrentTime(timeZone) {
     utcOffset >= 0 ? '+' : ''
   }${utcOffset}:00)`;
 }
- 
+
+/* Calendar Tab */
+
+document.addEventListener('DOMContentLoaded', function () {
+  const tabs = document.querySelectorAll('.tab-btn');
+  const all_content = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(function (tab, index) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (tab) {
+        tab.classList.remove('active');
+      });
+      tab.classList.add('active');
+
+      all_content.forEach(function (content) {
+        content.classList.remove('active');
+      });
+      all_content[index].classList.add('active');
+    });
+  });
+
+  all_content.forEach(function (content) {
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = 'Close';
+    closeBtn.classList.add('close-btn');
+    content.appendChild(closeBtn);
+
+    closeBtn.addEventListener('click', function () {
+      content.classList.remove('active');
+    });
+  });
+});
+
 
 /* Mobile Calendar */
 
@@ -167,5 +286,57 @@ function displayCurrentTime(timeZone) {
     });
 
     renderCalendar();
+  });
+})();
+
+
+/* Tab Calendar Day */
+
+(function () {
+  document.addEventListener('DOMContentLoaded', () => {
+    const monthYear2 = document.getElementById('monthYear2');
+    const dates2 = document.getElementById('dates2');
+    const prev2 = document.getElementById('prev2');
+    const next2 = document.getElementById('next2');
+
+    let currentDate2 = new Date();
+    let currentWeekStart2 = new Date(
+      currentDate2.setDate(currentDate2.getDate() - currentDate2.getDay())
+    );
+
+    function renderCalendar2() {
+      const year2 = currentWeekStart2.getFullYear();
+      const month2 = currentWeekStart2.getMonth();
+      const weekStart2 = new Date(currentWeekStart2);
+      const weekEnd2 = new Date(currentWeekStart2);
+      weekEnd2.setDate(weekEnd2.getDate() + 6);
+
+      monthYear2.textContent = `${weekStart2.toLocaleDateString('en-US', {
+        month: 'long',
+      })} ${year2}`;
+
+      dates2.innerHTML = '';
+      for (let i = 0; i < 7; i++) {
+        const date2 = new Date(weekStart2);
+        date2.setDate(weekStart2.getDate() + i);
+        dates2.innerHTML += `<div class="text-center rounded-full font-Poppins flex items-center justify-center relative ${
+          date2.toDateString() === new Date().toDateString()
+            ? 'today-date text-white bg-PrimaryColor-0'
+            : ''
+        }">${date2.getDate()} <span class="absolute -top-1 -right-1 size-[18px] bg-white rounded-full flex items-center justify-center text-green-500 text-sm border-2 border-white opacity-0"><i class="fa-solid fa-circle-check"></i></span></div>`;
+      }
+    }
+
+    prev2.addEventListener('click', () => {
+      currentWeekStart2.setDate(currentWeekStart2.getDate() - 7);
+      renderCalendar2();
+    });
+
+    next2.addEventListener('click', () => {
+      currentWeekStart2.setDate(currentWeekStart2.getDate() + 7);
+      renderCalendar2();
+    });
+
+    renderCalendar2();
   });
 })();
