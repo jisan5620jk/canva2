@@ -64,18 +64,18 @@
           <div
             class="col-span-2 calendar2 px-4 sm:px-10 w-full overflow-hidden relative z-40"
           >
-            <div class="absolute z-50 top-3 right-[12%] md:right-[18%]">
-              <ul class="flex items-center gap-2">
+            <div class="absolute z-50 top-3 right-[14%] md:right-[18%]">
+              <ul class="flex items-center gap-1 md:gap-2">
                 <li>
                   <button
-                    class="tab-btn font-Poppins text-sm text-HeadingColor-0 font-medium hover:text-PrimaryColor-0 px-3 py-1 rounded-md border border-BorderColor-0 transition-all duration-500 hover:border-PrimaryColor-0"
+                    class="tab-btn font-Poppins text-sm text-HeadingColor-0 font-medium hover:text-PrimaryColor-0 px-1 md:px-3 py-0 md:py-1 rounded-md border border-BorderColor-0 transition-all duration-500 hover:border-PrimaryColor-0"
                   >
                     Month
                   </button>
                 </li>
                 <li>
                   <button
-                    class="tab-btn font-Poppins text-sm text-HeadingColor-0 font-medium hover:text-PrimaryColor-0 px-3 py-1 rounded-md border border-BorderColor-0 transition-all duration-500 hover:border-PrimaryColor-0"
+                    class="tab-btn font-Poppins text-sm text-HeadingColor-0 font-medium hover:text-PrimaryColor-0 px-1 md:px-3 py-0 md:py-1 rounded-md border border-BorderColor-0 transition-all duration-500 hover:border-PrimaryColor-0"
                   >
                     Day
                   </button>
@@ -93,11 +93,11 @@
                 <div class="text-center">
                   <div
                     id="month2"
-                    class="font-Poppins font-semibold text-xl text-TextColor-0"
+                    class="font-Poppins font-semibold text-lg md:text-xl text-TextColor-0"
                   ></div>
                   <div
                     id="year2"
-                    class="font-Poppins text-lg text-TextColor2-0 -mt-[3px]"
+                    class="font-Poppins text-base md:text-lg text-TextColor2-0 -mt-[3px]"
                   ></div>
                 </div>
                 <div></div>
@@ -157,16 +157,21 @@
             <div class="tab-content hidden bg-white overflow-hidden">
               <div class="relative flex items-center justify-between py-3">
                 <h6
-                  class="px-3 py-[6px] font-Poppins text-TextDark-0 text-sm font-medium rounded-full border-BorderColor-0 border"
+                  class="px-1 md:px-3 py-[2px] md:py-[6px] font-Poppins text-TextDark-0 text-xs md:text-sm font-medium rounded-full border-BorderColor-0 border"
                 >
                   Today
                 </h6>
                 <div
                   id="monthYear"
-                  class="font-Poppins text-TextDark-0 font-semibold"
+                  class="font-Poppins text-sm md:text-base text-TextDark-0 font-semibold"
                 ></div>
                 <div></div>
                 <div></div>
+                <div class="md:hidden"></div>
+                <div class="md:hidden"></div>
+                <div class="md:hidden"></div>
+                <div class="md:hidden"></div>
+                <div class="md:hidden"></div>
                 <span class="text-TextColor-0"
                   ><i class="fa-regular fa-calendar-days"></i
                 ></span>
@@ -179,7 +184,6 @@
                   >
                     <i class="fa-solid fa-chevron-left"></i>
                   </button>
-
                   <button
                     id="next"
                     class="absolute top-1/2 -translate-y-1/2 right-0 sm:right-2 text-gray-300 transition-all duration-500 hover:text-TextColor-0"

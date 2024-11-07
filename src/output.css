@@ -924,8 +924,8 @@ video {
   right: 1.25rem;
 }
 
-.right-\[17\%\]{
-  right: 17%;
+.right-\[12\%\]{
+  right: 12%;
 }
 
 .top-1\/2{
@@ -936,36 +936,12 @@ video {
   top: 0.75rem;
 }
 
-.right-\[15\%\]{
-  right: 15%;
+.right-\[13\%\]{
+  right: 13%;
 }
 
-.right-\[1\%\]{
-  right: 1%;
-}
-
-.right-\[20\%\]{
-  right: 20%;
-}
-
-.right-\[\%\]{
-  right: %;
-}
-
-.right-\[18\%\]{
-  right: 18%;
-}
-
-.right-\[\]{
-  right: ;
-}
-
-.right-\[10\%\]{
-  right: 10%;
-}
-
-.right-\[12\%\]{
-  right: 12%;
+.right-\[14\%\]{
+  right: 14%;
 }
 
 .z-10{
@@ -1221,6 +1197,10 @@ video {
 
 .gap-\[24px\]{
   gap: 24px;
+}
+
+.gap-1{
+  gap: 0.25rem;
 }
 
 .overflow-hidden{
@@ -1488,6 +1468,26 @@ video {
   padding-bottom: 82px;
 }
 
+.px-0{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.py-\[2px\]{
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.py-0{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .pb-\[50px\]{
   padding-bottom: 50px;
 }
@@ -1577,6 +1577,11 @@ video {
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold{
@@ -1983,6 +1988,10 @@ video {
     justify-content: flex-end;
   }
 
+  .md\:gap-2{
+    gap: 0.5rem;
+  }
+
   .md\:rounded{
     border-radius: 0.25rem;
   }
@@ -2020,6 +2029,21 @@ video {
     padding-bottom: 14px;
   }
 
+  .md\:px-3{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .md\:py-\[6px\]{
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .md\:py-1{
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
   .md\:pt-0{
     padding-top: 0px;
   }
@@ -2036,6 +2060,16 @@ video {
   .md\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .md\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .md\:text-PrimaryColor-0{
